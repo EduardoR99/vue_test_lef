@@ -2,6 +2,7 @@
 import Banner from '../components/Banner.vue';
 import Options from '../components/Options.vue';
 
+
 let categoriaSelecionada = null;
 let categoriaSelecionadaTitulo = null;
 
@@ -11,7 +12,6 @@ let categoriaSelecionadaTitulo = null;
   <main>
     <Banner />
     <Options />
-    
   </main>
 </template>
 

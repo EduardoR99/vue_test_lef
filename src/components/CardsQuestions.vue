@@ -1,3 +1,15 @@
+<template>
+  <div class="card_container">
+    <div class="card_question">
+      {{ pergunta }}
+    </div>
+    <RouterLink class="button" :to="`/question/${idQuestion}`"> <!-- Alterado para rota dinâmica -->
+      <button class="open">abrir</button>
+    </RouterLink>
+  </div>
+</template>
+
+
 <script>
 export default {
   name: 'CardsQuestions',
@@ -5,21 +17,19 @@ export default {
     pergunta: {
       type: String,
       required: true
+    },
+    idQuestion: {
+      type: Number,
+      required: true
+    },
+    categoriaSelecionadaId: {
+      type: Number,
+      required: true
     }
   }
 };
 </script>
 
-<template>
-    <div class="card_container">
-      <div class="card_question">
-        {{ pergunta }}
-      </div>
-      <div class="button">
-        <button class="open">abrir</button>
-      </div>
-    </div>
-  </template>
 <style scoped>
     .card_container{
         display: flex;
